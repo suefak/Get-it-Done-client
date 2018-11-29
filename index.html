@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Get it Done!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Get it Done!</h1>
+      <form id="sign-up" class="border">
+         <fieldset>
+           <legend>Sign up!</legend>
+           <input type="text" name="credentials[email]" placeholder="Email">
+           <input type="password" name="credentials[password]" placeholder="Password">
+           <input type="password" name="credentials[password_confirmation]"
+                  placeholder="Confirm Password">
+           <input type="submit" value="Sign up!">
+         </fieldset>
+      </form>
+
+      <form id="sign-in" class="border">
+         <fieldset>
+           <legend>Sign in!</legend>
+           <input type="text" name="credentials[email]" placeholder="Email">
+           <input type="password" name="credentials[password]" placeholder="Password">
+           <input type="submit" value="Sign in!">
+         </fieldset>
+      </form>
+
+      <form id="change-password" class="border">
+         <fieldset>
+           <legend>Change password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old password">
+           <input type="password" name="passwords[new]" placeholder="New password">
+           <input type="submit" value="Change password!">
+         </fieldset>
+      </form>
+
+      <form id="sign-out" class="border">
+         <fieldset>
+           <legend>Sign out!</legend>
+           <input type="submit" value="Sign out!">
+         </fieldset>
+      </form>
+
+      <head>
+  <title>Get it Done!</title>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+  <div class="container">
+    <p>
+      <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+    </p>
+
+    <h3>Get it Done!</h3>
+    <ul id="incomplete-tasks">
+      <li><input type="checkbox"><label></label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      <li class="editMode"><input type="checkbox"><label></label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+
+    </ul>
+
+    <h3>Finished</h3>
+    <ul id="completed-tasks">
+      <li><input type="checkbox" checked><label></label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="app.js"></script>
+
+
+    </body>
+</html>
