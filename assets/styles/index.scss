@@ -4,26 +4,33 @@ body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtW5ZhrBDmgV18qfwPi9BRkaX0Y3-zx7S8c-S92j6is9tjBZg4");
   font-family: Lato, sans-serif;
 }
+
 .container {
   display: block;
   width: 400px;
   margin: 100px auto 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 li * {
   float: left;
 }
+
 li,
 h3 {
-  clear:both;
+  clear: both;
   list-style: none;
 }
-input, button {
+
+input,
+button {
   outline: none;
 }
+
 button {
   background: none;
   border: 0px;
@@ -34,6 +41,7 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 button:hover {
   color: #333;
 }
@@ -49,6 +57,7 @@ label[for='new-task'] {
   margin: 0;
   text-transform: uppercase;
 }
+
 input[type="text"] {
   margin: 0;
   font-size: 18px;
@@ -70,6 +79,7 @@ label[for='new-task'] {
   display: block;
   margin: 0 0 20px;
 }
+
 input#new-task {
   float: left;
   width: 318px;
@@ -84,20 +94,24 @@ li {
   padding: 20px 0;
   border-bottom: 1px solid #eee;
 }
+
 li > input[type="checkbox"] {
   margin: 0 10px;
   position: relative;
   top: 15px;
 }
+
 li > label {
   font-size: 18px;
   line-height: 40px;
   width: 237px;
   padding: 0 0 0 11px;
 }
+
 li > input[type="text"] {
   width: 226px;
 }
+
 li > .delete:hover {
   color: #CF2323;
 }
@@ -110,7 +124,7 @@ li > .delete:hover {
 
 /* Edit Task */
 ul li input[type=text] {
-  display:none;
+  display: none;
 }
 
 ul li.editMode input[type=text] {
