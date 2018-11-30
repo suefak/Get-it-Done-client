@@ -40,65 +40,56 @@ const signOut = () => {
   })
 }
 
-module.exports = {
-  signUp,
-  signIn,
-  changePassword,
-  signOut
-}
 
 const Create = data => {
   return $.ajax({
     url: config.apiUrl + '/checklist_items',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
 
-const Index = data => {
+const Index = () => {
   return $.ajax({
     url: config.apiUrl + '/checklist_items',
     method: 'GET',
-    data
-  })
-}
-
-const Show = data => {
-  return $.ajax({
-    url: config.apiUrl + '/checklist_items/:id',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
-}
-
-const Delete = data => {
-  return $.ajax({
-    url: config.apiUrl + '/checklist_items/:id',
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
-}
-
-const Update = () => {
-  return $.ajax({
-    url: config.apiUrl + '/checklist_items/:id',
-    method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
+const Delete = id => {
+  return $.ajax({
+    url: config.apiUrl + '/checklist_items/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const Update = (data, id) => {
+  return $.ajax({
+    url: config.apiUrl + '/checklist_items/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
+  signUp,
+  signIn,
+  changePassword,
+  signOut,
   Create,
   Index,
-  Show,
   Delete,
   Update
 }

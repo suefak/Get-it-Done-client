@@ -8,8 +8,6 @@ const ui = require('./ui.js')
 const onSignUp = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-
-
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -41,10 +39,47 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onCreatetodo = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  // $(event.target).trigger('reset')
+  api.Create(data)
+    .then(ui.CreateSuccess)
+    .catch(ui.CreateFailure)
+}
+const onIndextodo = event => {
+  event.preventDefault()
+  // const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Index()
+    .then(ui.IndexSuccess)
+    .catch(ui.IndexFailure)
+}
+const onDeleteTodo = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Delete(data.checklist_item.id)
+    .then(ui.DeleteSuccess)
+    .catch(ui.DeleteFailure)
+}
+const onUpdateTodo = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Update(data, data.checklist_item.id)
+    .then(ui.UpdateSuccess)
+    .catch(ui.UpdateFailure)
+}
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onCreatetodo,
+  onIndextodo,
+  onDeleteTodo,
+  onUpdateTodo
 }
