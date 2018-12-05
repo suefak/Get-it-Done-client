@@ -52,7 +52,7 @@ const Create = data => {
   })
 }
 
-const Index = () => {
+const index = () => {
   return $.ajax({
     url: config.apiUrl + '/checklist_items',
     method: 'GET',
@@ -89,7 +89,7 @@ module.exports = {
   changePassword,
   signOut,
   Create,
-  Index,
+  index,
   Delete,
   Update
 }
