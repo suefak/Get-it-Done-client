@@ -40,7 +40,6 @@ const signOut = () => {
   })
 }
 
-
 const Create = data => {
   return $.ajax({
     url: config.apiUrl + '/checklist_items',
@@ -73,6 +72,8 @@ const Delete = id => {
 }
 
 const Update = (data, id) => {
+  console.log(data)
+  console.log(store.user)
   return $.ajax({
     url: config.apiUrl + '/checklist_items/' + id,
     method: 'PATCH',

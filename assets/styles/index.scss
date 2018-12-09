@@ -1,8 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtW5ZhrBDmgV18qfwPi9BRkaX0Y3-zx7S8c-S92j6is9tjBZg4");
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTh5iOqUDI0QO3cia5RWWAaJULYUBTNDHxKxxUZBn3Hv3RMjo');
   font-family: Lato, sans-serif;
+  background-repeat: space;
+  background-size: cover;
 }
 
 .container {

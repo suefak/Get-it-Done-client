@@ -9,9 +9,9 @@ const signUpSuccess = data => {
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
   $('#sign-up')[0].reset()
-  $('#message').text('Signed up successfully')
-$('#message').removeClass()
-$('#message').addClass('success')
+
+
+
 // $('#signupemail').val('')
 // $('#signuppassword').val('')
 // $('#signuppasswordconfirm').val('')
@@ -27,12 +27,15 @@ const signUpFailure = error => {
 
 const signInSuccess = data => {
   store.user = data.user
+  console.log(store.user)
+  console.log(store.user.token)
   magic.signInDone()
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signInSuccess ran. Data is :', data)
   $('#sign-in')[0].reset()
+  // magic.signInDone()
 }
 
 const signInFailure = error => {
@@ -98,7 +101,7 @@ const CreateFailure = error => {
 }
 
 const IndexSuccess = data => {
-  store.user = data.user
+  // store.user = data.user
   $('#message').text('Index successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -143,7 +146,6 @@ const DeleteFailure = error => {
 
 const UpdateSuccess = data => {
   $('#message').text('Updated successfully')
-  store.user = null
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('updateSuccess ran. Data is :', data)

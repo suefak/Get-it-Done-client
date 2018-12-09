@@ -52,7 +52,7 @@ const onIndextodo = event => {
   event.preventDefault()
   // const data = getFormFields(event.target)
   // $(event.target).trigger('reset')
-  api.Index()
+  api.index()
     .then(ui.IndexSuccess)
     .catch(ui.IndexFailure)
 }
